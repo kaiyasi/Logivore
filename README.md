@@ -1,4 +1,4 @@
-# 🤖 Logivore
+# Logivore
 
 Languages: English | [繁體中文](documentation/zh-tw/README.md) | [简体中文](documentation/zh-cn/README.md) | [日本語](documentation/ja/README.md) | [한국어](documentation/ko/README.md) | [Deutsch](documentation/de/README.md) | [Русский](documentation/ru/README.md)
 
