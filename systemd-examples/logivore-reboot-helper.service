@@ -1,0 +1,19 @@
+# Logivore Reboot Helper Service
+# This service allows the bot to perform system reboots
+# Place this file in /etc/systemd/system/
+
+[Unit]
+Description=Logivore Reboot Helper
+After=network.target
+
+[Service]
+Type=oneshot
+ExecStart=/bin/bash -c "echo 'Reboot helper service ready'"
+RemainAfterExit=yes
+
+# Allow the bot user to run reboot commands
+# Add this to /etc/sudoers.d/logivore:
+# logivore ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop *, /usr/bin/systemctl start *, /usr/bin/systemctl restart *, /sbin/shutdown, /sbin/reboot
+
+[Install]
+WantedBy=multi-user.target

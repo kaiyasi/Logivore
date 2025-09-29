@@ -1,0 +1,8 @@
+{
+    "update_interval": 10,
+    "monitored_disks": [],
+    "alerts": [],
+    "alert_channel": null,
+    "alert_interval": 60,
+    "language": "en"
+}

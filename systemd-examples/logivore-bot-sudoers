@@ -1,0 +1,19 @@
+# Sudo permissions for Logivore
+# Place this file in /etc/sudoers.d/logivore
+# Make sure to replace 'logivore' with your actual bot user if different
+
+# Allow bot to manage systemd services
+logivore ALL=(ALL) NOPASSWD: /usr/bin/systemctl stop *
+logivore ALL=(ALL) NOPASSWD: /usr/bin/systemctl start *
+logivore ALL=(ALL) NOPASSWD: /usr/bin/systemctl restart *
+logivore ALL=(ALL) NOPASSWD: /usr/bin/systemctl status *
+
+# Allow bot to reboot/shutdown system
+logivore ALL=(ALL) NOPASSWD: /sbin/shutdown
+logivore ALL=(ALL) NOPASSWD: /sbin/reboot
+
+# Allow bot to check journal logs
+logivore ALL=(ALL) NOPASSWD: /usr/bin/journalctl *
+
+# Docker commands (if needed)
+logivore ALL=(ALL) NOPASSWD: /usr/bin/docker *

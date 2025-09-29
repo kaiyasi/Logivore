@@ -1,0 +1,27 @@
+version: '3.8'
+
+services:
+  logivore:
+    build:
+      context: ../../
+      dockerfile: deploy/docker/Dockerfile
+    container_name: logivore
+    restart: unless-stopped
+    # Enable accurate host monitoring and port listing
+    network_mode: host
+    pid: host
+    environment:
+      - DISCORD_TOKEN=${DISCORD_TOKEN}
+      - OWNER_ID=${OWNER_ID}
+      - LOG_LEVEL=INFO
+    volumes:
+      - ../../config:/app/config
+      - ../../logs:/app/logs
+      # Enable Docker management commands from within the bot
+      - /var/run/docker.sock:/var/run/docker.sock:ro
+    read_only: true
+    tmpfs:
+      - /tmp
+    security_opt:
+      - no-new-privileges:true
+
