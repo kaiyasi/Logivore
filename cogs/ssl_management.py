@@ -10,7 +10,7 @@ import datetime
 import json
 import os
 from utils.i18n import i18n
-from utils.embed_formatter import create_standard_embed
+from utils.embed_formatter import create_standard_embed, EmbedFormatter
 
 class SSLManagementCog(commands.Cog):
     """Handles SSL certificate management and renewal"""

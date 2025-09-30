@@ -1,4 +1,3 @@
-# Logivore
 
 Languages: English | [繁體中文](documentation/zh-tw/README.md) | [简体中文](documentation/zh-cn/README.md) | [日本語](documentation/ja/README.md) | [한국어](documentation/ko/README.md) | [Deutsch](documentation/de/README.md) | [Русский](documentation/ru/README.md)
 
@@ -181,7 +180,7 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 
 [![GitHub Issues](https://img.shields.io/badge/GitHub-Issues-red.svg)](https://github.com/kaiyasi/Logivore/issues)
 [![GitHub Discussions](https://img.shields.io/badge/GitHub-Discussions-blue.svg)](https://github.com/kaiyasi/Logivore/discussions)
-[![Discord](https://img.shields.io/badge/Discord-Community-purple.svg)]([https://discord.gg/serelix](https://discord.gg/eRfGKepusP))
+[![Discord](https://img.shields.io/badge/Discord-Community-purple.svg)](https://discord.gg/serelix)
 [![Email](https://img.shields.io/badge/Email-Support-green.svg)](mailto:serelixstudio@gmail.com)
 
 </div>

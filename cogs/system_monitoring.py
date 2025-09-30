@@ -14,7 +14,7 @@ import asyncio
 from utils import get_bar, format_bytes, format_uptime, get_core_bars
 from typing import List
 from utils.i18n import i18n
-from utils.embed_formatter import create_standard_embed
+from utils.embed_formatter import create_standard_embed, EmbedFormatter
 
 class SystemMonitoringCog(commands.Cog):
     """Handles system monitoring and real-time panels"""
@@ -310,7 +310,8 @@ class SystemMonitoringCog(commands.Cog):
             initial_embed = EmbedFormatter.info_embed(
                 title="System Monitor",
                 description="Initializing system monitor...",
-                command_name="monitor"
+                command_name="monitor",
+                lang=self.bot.config.get("language", "en")
             )
             await interaction.response.send_message(embed=initial_embed)
             message = await interaction.original_response()
@@ -351,7 +352,8 @@ class SystemMonitoringCog(commands.Cog):
             stopped_embed = EmbedFormatter.info_embed(
                 title="System Monitor Stopped",
                 description="```\nSYSTEM STATUS\nMonitoring has been stopped.\n```",
-                command_name="monitor stop"
+                command_name="monitor stop",
+                lang=self.bot.config.get("language", "en")
             )
 
             try:
